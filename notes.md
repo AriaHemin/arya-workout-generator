@@ -11,3 +11,29 @@
 - 30 seconds per area then move to next area. 
 - do 2 to 3 rounds. 
 - 30 seconds to 60 seconds rest between rounds
+
+---
+
+{
+          if(workoutCreated && workoutStarted){
+            return(
+              <>
+                <div className="flex justify-center" >
+                  <img className="w-[200px]" src={workout[exerciseIndex - 1].img} alt={"image of " + workout[exerciseIndex - 1] } ></img>
+                </div>
+                <ExerciseCard exercise={workout[exerciseIndex - 1]}/>
+              </>
+            )
+          }else if(workoutCreated){
+            workout.map((exercise)=>{
+              return(
+                <>
+                  <div className="flex justify-center" >
+                    <img className="w-[200px]" src={exercise.img} alt={"image of " + exercise } ></img>
+                  </div>
+                  <ExerciseCard exercise={exercise}/>
+                </>
+              )
+            }
+          }
+        }

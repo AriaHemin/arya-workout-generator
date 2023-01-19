@@ -15,8 +15,12 @@ function Timer(props) {
               }
             }
           }, 1000);
-        if(props.timer === 0 && props.round < 3 && props.exerciseIndex < 8){
+          if(props.timer === 0 && props.round < 3 && props.exerciseIndex < 8){
             props.setTimer(30)
+          }
+          if(props.timer === 0 && props.round === 3 && props.exerciseIndex  === 1){
+            
+            props.setWorkoutStarted(false)
           }
       }, [props.timer]);
     return (<div >

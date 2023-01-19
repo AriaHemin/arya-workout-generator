@@ -1,8 +1,11 @@
 function ExerciseCard(props) {
 return (
+  <>
     <div >
-      {props.exercise}
+      {props.exercise.name}
     </div>
+    
+  </>
   );
 }
 
